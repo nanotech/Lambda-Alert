@@ -39,7 +39,7 @@
 
 - (void) alertView: (UIAlertView*) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex
 {
-    if (buttonIndex >= 0 && buttonIndex < [blocks count]) {
+    if (buttonIndex >= 0 && buttonIndex < (NSInteger)[blocks count]) {
         dispatch_block_t block = [blocks objectAtIndex:buttonIndex];
         block();
     }

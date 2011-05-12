@@ -75,7 +75,7 @@
 - (void) actionSheet: (UIActionSheet*) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex
 {
     NSParameterAssert(actionSheet == sheet);
-    if (buttonIndex >= 0 && buttonIndex < [blocks count]) {
+    if (buttonIndex >= 0 && buttonIndex < (NSInteger)[blocks count]) {
         dispatch_block_t block = [blocks objectAtIndex:buttonIndex];
         block();
     }
