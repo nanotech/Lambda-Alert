@@ -10,10 +10,11 @@
 
 - (id) initWithTitle: (NSString*) title message: (NSString*) message
 {
-    [super init];
-    alert = [[UIAlertView alloc] initWithTitle:title message:message
-        delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-    blocks = [[NSMutableArray alloc] init];
+    if ((self = [super init])) {
+        alert = [[UIAlertView alloc] initWithTitle:title message:message
+            delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+        blocks = [[NSMutableArray alloc] init];
+    }
     return self;
 }
 
